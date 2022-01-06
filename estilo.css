@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Nanum Gothic', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+/* ESTILOS DO HEADER DA PAGINA */
+
+header{
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #DAE5E8;
+  position: -webkit-sticky; /* Safari */
+
+}
+
+.logo{
+    width: 200px;
+}
+
+.menu{
+    font-size: 25px;
+}
+
+.menu > a {
+    text-decoration: none;
+    padding: 0 10px;
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.menu > a:hover{
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,.3));
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,.3));
+}
+
+/* ESTILOS DO SUB MENU */
+
+.sub-nav{
+    display: flex;
+    /* background-color: #cddadd; */
+    background-color: rgb(233, 233, 233);
+    box-shadow: 1px 1px 5px black;
+    justify-content: space-evenly;  
+    align-items: center;
+    height: 70px;
+}
+
+.sub-nav > div > img{
+    width: 3vw;
+}
+
+.sub-nav > div{
+    display: flex;
+}
+
+.sub-nav > div > h6{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+}
+
+/* ESTILOS DA INTRODUÇÃO */
+
+.introducao{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+}
+
+.introducao-esquerda{
+    background-color: #DAE5E8;
+    padding: 100px 100px 100px 100px;
+    box-shadow: 1px 1px 5px gray;
+    width: 50vw;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+}
+
+#box-imagem{
+    width: 30vw;
+    height: 30vw;
+    position: relative;
+    box-shadow: 1px 1px 5px black;
+}
+
+#box-imagem > img{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 5000ms;
+}
+
+#box-imagem > img.selected { 
+    opacity: 1;
+}
+
+/* ESTILOS DA PAGINA DE CONTATO */
+
+main > img {
+    padding-top: 20px;
+    width: 100vw;
+    height: 500px;
+}
+
+.h1-do-form{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 1% 0;
+    margin: 2% 0;
+  background-color: #DAE5E8;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 400px;
+}
+
+.row > div {
+    padding: 50px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.row > div > label{
+    font-size: large;
+    font-weight: bold;
+}
+
+.row > div > button{
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 750px) {
+   
+   .introducao{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+       flex-wrap: wrap;
+   }
+   
+    .introducao-esquerda{
+        display: flex;    
+        width: 90%;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    #box-imagem{
+        display: flex;
+        width: 90vw;
+    }
+   header{
+       display: flex;
+       justify-content: space-between;
+   }
+
+   .logo{
+       width: 30%;
+   }
+
+   .menu{
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     width: 50%;
+     /* padding: 20px 0 0 0; */
+     height: 100%;
+     text-align: end;
+   }
+
+   .menu > a{
+     display: flex;
+     flex-direction: column;
+     font-size: 1em;
+   }
+
+   .sub-nav > div > img{
+    display: none;
+}
+}

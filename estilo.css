@@ -306,6 +306,8 @@ main > img {
 
 .Endereço-footer {
     display:flex;
+    max-width: 50%;
+    text-align: center;
     /* width: 800px; */
     align-items: center;
     justify-content: center;
@@ -500,6 +502,9 @@ main > img {
 
 /* RESPONSIVIDADE FOOTER */
 
+.main-footer{
+    justify-content: center;
+}
 .Logo-footer {
     display: flex;
     text-align: center;
@@ -521,7 +526,7 @@ main > img {
 
 .Endereço-footer > p{
     display:flex;
-    width: 80%;
+    width: 100%;
     /* width: 800px; */
     align-items: center;
     justify-content: center;

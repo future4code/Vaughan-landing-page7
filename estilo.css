@@ -6,7 +6,7 @@
 
 body{
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     flex-direction: column;
     font-family: 'Nanum Gothic', sans-serif;
@@ -80,7 +80,7 @@ header{
     display: flex;
     justify-content:space-around;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 70vh;
 }
 
@@ -121,8 +121,8 @@ header{
 
 main > img {
     padding-top: 20px;
-    width: 100vw;
-    height: 500px;
+    width: 100%;
+    height: auto;
 }
 
 .h1-do-form{
@@ -131,17 +131,18 @@ main > img {
     justify-items: center;
     padding: 1% 0;
     margin: 2% 0;
-  background-color: #DAE5E8;
+    background-color: #DAE5E8;
 }
 
 .row {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 400px;
+    margin-bottom: 100px;
 }
 
 .row > div {
+    margin-top: 7px;
     padding: 50px;
     box-shadow: 1px 1px 5px black;
 }
@@ -231,7 +232,7 @@ main > img {
 }
 
 .produto-imagem{
-    max-width: 95%;
+    width: 13vw;
     height: auto;
 }
 
@@ -243,9 +244,160 @@ main > img {
 }
 
 
+/*-------------------------------------------------*/
+
+/*Página "Quem Somos"*/
+
+#quem-somos{
+    display: flex;
+    margin-top: 20px;   
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;    
+}
+
+#quem-somos-titulo{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 50px;
+    background-image: linear-gradient(to bottom, #cddadd, #DAE5E8) ;
+    width: 100%;
+    text-align: center;
+}
+
+#quem-somos-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #DAE5E8, transparent);
+}
+
+#quem-somos-text{
+    padding: 100px;
+    width: 950px;    
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.quem-somos-img{    
+    width: 100%;
+}
+
+/* ------------------------------- */
+
+/* RODAPÉ  */
+
+.main-footer{
+    display:flex;
+    margin-top: 100px;
+    bottom: 0;
+    background-color: #DAE5E8;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Logo-footer >img {
+    width: 300px;  
+}
+
+.Endereço-footer {
+    display:flex;
+    /* width: 800px; */
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+} 
+
+.logo-footer-redes{
+    width: 24px;
+    margin:0;
+    padding:0;
+}
+
+
+.Redes-Sociais {
+    display: flex;
+    flex-direction:column;
+    margin-right: 20px;
+    width: 12%;
+    justify-content: center;
+}
+
+.Redes-Sociais > h2 {
+    margin-bottom: 40px;
+}
+
+.Redes-Sociais > a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.test {
+    padding-left: 10px;
+    text-decoration: none;
+    color: #000;
+    
+}
+
+/* --------------------------- */
+
+/* PAGINA NOSSO TIME */
+
+
+.nosso-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DAE5E8;
+    width: 50%;
+    margin: 50px auto 0 auto;
+    box-shadow: 1px 1px 5px black;
+    padding-bottom: 40px;
+}
+
+.nosso-time > div > img {
+    width: 30%;
+}
+
+.nosso-time > h1 {
+    margin: 50px 0;
+    font-size: 2em;
+}
+
+.dev-roberto {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.dev-romario {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.dev-well {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
 /* RESPONSIVIDADE */
 
 @media screen and (max-width: 750px) {
+
+    /* INTRODUÇÃO E HEADER */
+
+    main{
+        flex-wrap: wrap;
+    }
    
    .introducao{
        display: flex;
@@ -263,34 +415,134 @@ main > img {
 
     #box-imagem{
         display: flex;
-        width: 90vw;
+        width: 90%;
     }
    header{
-       display: flex;
-       justify-content: space-between;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 8px;
    }
 
    .logo{
-       width: 30%;
+      width: 150px;
    }
 
    .menu{
      display: flex;
      justify-content: center;
-     flex-direction: column;
-     width: 50%;
+     align-items: center;     
+     font-size: 13px;
      /* padding: 20px 0 0 0; */
-     height: 100%;
-     text-align: end;
+     text-align: center;
    }
-
+/* 
    .menu > a{
      display: flex;
      flex-direction: column;
-     font-size: 1em;
-   }
+     font-size: 0.5em;
+   } */
 
-   .sub-nav > div > img{
-    display: none;
+   .sub-nav{
+    font-size: 15px;
+    text-align: center;
+    padding: 8px;
 }
+
+.sub-nav > div > img{
+    display: none;
+    }
+
+
+    /* CONTEUDO */
+
+    
+    .produto-imagem{
+        width: 150px;
+        height: auto;
+    }
+
+    .intro-background-text{
+        bottom: -20px;
+        margin-bottom: 20px;
+        padding-top: 150px;
+        font-size: 35px;
+    }
+    
+    .intro-produtos-text{
+        font-size: medium;
+    }
+
+    #produtos{
+        width: 50%;
+        grid-template-columns: 1fr;
+    }
+
+/* QUEM SOMOS */
+
+.quem-somos-img {
+        width: 100%; 
+        height: 200px;
+        object-fit: cover;
+        object-position: 50% ;
+}
+
+#quem-somos-titulo{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 40px;
+}
+#quem-somos-text{
+    padding: 20px;
+    width: 95%;
+}
+
+
+/* RESPONSIVIDADE FOOTER */
+
+.Logo-footer {
+    display: flex;
+    text-align: center;
+    width: 100%;  
+    align-items: center;
+    justify-content: center;
+}
+.Logo-footer > img{
+    width: 40%;
+}
+
+.Endereço-footer {
+    display:flex;
+    width: 100%;
+    /* width: 800px; */
+    align-items: center;
+    justify-content: center;
+}
+
+.Endereço-footer > p{
+    display:flex;
+    width: 80%;
+    /* width: 800px; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Redes-Sociais {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* RESPONSIVIDADE PAGINA NOSSO TIME */
+
+
+.nosso-time {
+    width: 80%;
+}
+
+
 }

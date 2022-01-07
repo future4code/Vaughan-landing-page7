@@ -121,8 +121,8 @@ header{
 
 main > img {
     padding-top: 20px;
-    width: 100vw;
-    height: 500px;
+    width: 100%;
+    height: auto;
 }
 
 .h1-do-form{
@@ -142,6 +142,7 @@ main > img {
 }
 
 .row > div {
+    margin-top: 7px;
     padding: 50px;
     box-shadow: 1px 1px 5px black;
 }
@@ -280,8 +281,7 @@ main > img {
 
 
 .quem-somos-img{    
-    height: auto;
-    width: 350px;  
+    width: 100%;    
 }
 
 /*-------------------------------------------------*/
@@ -310,27 +310,28 @@ main > img {
     }
    header{
        display: flex;
+       flex-direction: column-reverse;
        justify-content: space-between;
+       padding: 8px;
    }
 
    .logo{
-       width: 30%;
+       width: 150px;
    }
 
    .menu{
      display: flex;
      justify-content: center;
-     flex-direction: column;
-     width: 50%;
+     align-items: center;     
+     font-size: 13px;
      /* padding: 20px 0 0 0; */
-     height: 100%;
-     text-align: end;
+     text-align: center;
    }
 
-   .menu > a{
-     display: flex;
-     flex-direction: column;
-     font-size: 1em;
+   .sub-nav{
+       font-size: 15px;
+       text-align: center;
+       padding: 8px;
    }
 
    .sub-nav > div > img{
@@ -354,13 +355,15 @@ main > img {
     }
 
     .quem-somos-img {
-        height: auto;
-        width: 250px;
+        width: 100%; 
+        height: 200px;
+        object-fit: cover;
+        object-position: 50% ;
     }
     
     #quem-somos-titulo{
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         font-size: 40px;
     }
     #quem-somos-text{
